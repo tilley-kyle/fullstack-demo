@@ -1,7 +1,8 @@
 import React from 'react';
 import Nav from './Nav.jsx';
-import '../styles/App.scss';
 import BugTile from './BugTile.jsx';
+
+import '../styles/App.scss';
 
 class App extends React.Component {
   constructor() {
