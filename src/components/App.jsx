@@ -1,17 +1,19 @@
 import React from 'react';
+import '../styles/App.scss';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      title: 'Hello World',
+      filter: 'None',
+      bugs: 'Hello World',
     };
   }
 
   render() {
     return (
       <div>
-        {this.state.title}
+        {this.state.bugs}
       </div>
     );
   }
