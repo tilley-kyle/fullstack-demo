@@ -1,8 +1,14 @@
 # SPRINT OBJECTIVES
-Before you go any further, make sure you've done the following.
+Before you go any further, make sure you've done the following:
 > npm install
 
-Following the objectives in order can help provide direction. 
+You can spin up the front-end by using:
+> npm start
+
+You can spin up the back-end by using:
+> npm run server
+
+Following the objectives in order of appearance *can* help provide direction. 
 
 ### FRONT-END
 - Filter bugs by the threat level set by the user.
