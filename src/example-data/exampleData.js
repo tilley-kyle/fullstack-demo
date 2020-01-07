@@ -21,7 +21,7 @@ const exampleData = [
     reportedBy: 'Daniel',
     createdDate: '1/6/2020',
     assignedTo: 'Bailey',
-    threatLevel: 'None',
+    threatLevel: 'Low-Priority',
   },
   {
     bugName: '4',
