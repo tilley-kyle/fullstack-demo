@@ -20,6 +20,7 @@ class App extends React.Component {
         },
       ],
     };
+    this.filterHandler = this.filterHandler.bind(this);
   }
 
   filterHandler(filter) {
@@ -30,7 +31,6 @@ class App extends React.Component {
     return (
       <div>
         <Nav
-          filter={this.state.filter}
           filterHandler={this.filterHandler}
         />
         {this.state.bugs.map((bug) => (
