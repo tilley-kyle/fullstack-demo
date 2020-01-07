@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './Nav.jsx';
 import BugTile from './BugTile.jsx';
+import exampleData from '../example-data/exampleData';
 
 import '../styles/App.scss';
 
@@ -9,16 +10,7 @@ class App extends React.Component {
     super();
     this.state = {
       filter: 'None',
-      bugs: [
-        {
-          bugName: '#1',
-          bugDescription: 'Proptype validation warning for Nav component',
-          reportedBy: 'Bailey',
-          createdDate: '1/5/2020',
-          assignedTo: 'Teddi',
-          threatLevel: 'Critical',
-        },
-      ],
+      bugs: exampleData,
     };
     this.filterHandler = this.filterHandler.bind(this);
   }
@@ -29,7 +21,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <table>
         <Nav
           filterHandler={this.filterHandler}
         />
@@ -44,7 +36,7 @@ class App extends React.Component {
             key={bug.bugName}
           />
         ))}
-      </div>
+      </table>
     );
   }
 }

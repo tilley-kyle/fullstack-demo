@@ -3,14 +3,14 @@ import React from 'react';
 import '../styles/BugTile.scss';
 
 const BugTile = (props) => (
-  <article className="bugTile">
-    <section>{props.bugName}</section>
-    <section>{props.bugDescription}</section>
-    <section>{props.reportedBy}</section>
-    <section>{props.createdDate}</section>
-    <section>{props.assignedTo}</section>
-    <section>{props.threatLevel}</section>
-  </article>
+  <tr className="bugTile">
+    <td>{props.bugName}</td>
+    <td>{props.bugDescription}</td>
+    <td>{props.reportedBy}</td>
+    <td>{props.createdDate}</td>
+    <td>{props.assignedTo}</td>
+    <td>{props.threatLevel}</td>
+  </tr>
 );
 
 export default BugTile;
