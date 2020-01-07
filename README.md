@@ -8,8 +8,6 @@ You can spin up the front-end by using:
 You can spin up the back-end by using:
 > npm run server
 
-Following the objectives in order of appearance *can* help provide direction. 
-
 ### FRONT-END
 - Filter bugs by the threat level set by the user.
 
