@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/Nav.scss';
-
 const Nav = (props) => (
   <tr>
     <th>Bug #</th>

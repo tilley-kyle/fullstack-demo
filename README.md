@@ -1,4 +1,8 @@
 # SPRINT OBJECTIVES
+Before you go any further, make sure you've done the following.
+> npm install
+
+Following the objectives in order can help provide direction. 
 
 ### FRONT-END
 - Filter bugs by the threat level set by the user.
@@ -13,9 +17,9 @@
 - Populate the client with bug reports sent back from the server.
 
 ### BACK-END
-Create a route to send back **ALL** bug reports in the DB.
+- Create a route to send back **ALL** bug reports in the DB.
 
-Create a route to handle new bug reports sent from the client.
+- Create a route to handle new bug reports sent from the client.
 
 ### DATABASE
 - Populate a NoSQL DB with exampleData (MongoDB w/ Mongoose)

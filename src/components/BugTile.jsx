@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/BugTile.scss';
-
 const BugTile = (props) => (
   <tr className="bugTile">
     <td>{props.bugName}</td>
