@@ -28,7 +28,7 @@ Following the objectives in order of appearance *can* help provide direction.
 - Create a route to handle new bug reports sent from the client.
 
 ### DATABASE
-- Populate a NoSQL DB with exampleData (MongoDB w/ Mongoose)
+- Populate a MongoDB (w/ Mongoose) with exampleData.
 
 - Create a method to send back all bug reports in the DB.
 
