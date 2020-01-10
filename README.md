@@ -43,6 +43,6 @@ If it continues to fail and you're on a macOS make sure you've installed Xcode:
 > xcode-select --install
 >> npm install and try npm start again
 
-If it continues to fail: globally install webpack, webpack-cli, and webpack-dev-server
+If it continues to fail: **globally install webpack, webpack-cli, and webpack-dev-server** then:
 > npm start
->> if npm start fails try the first step
+>> if npm start fails try the first suggestion
