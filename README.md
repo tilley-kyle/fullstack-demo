@@ -1,6 +1,7 @@
 # SPRINT OBJECTIVES
 Before you go any further, make sure you've done the following:
 > npm install
+>> If you have issues installing webpack/start script see below
 
 You can spin up the front-end by using:
 > npm start
@@ -31,3 +32,17 @@ You can spin up the back-end by using:
 - Create a method to send back all bug reports in the DB.
 
 - Create a method to add a new bug report to the DB.
+
+# WEBPACK WOES
+
+If running the start script does not work for you try again with:
+> webpack-dev-server --config ./webpack.config.js --mode development
+>> Then go to localhost:8080 in your browser
+
+If it continues to fail and you're on a Mac OS make sure you've installed Xcode:
+> xcode-select --install
+>> npm install and try again
+
+If it continues to fail: globally install webpack, webpack-cli, and webpack-dev-server
+> npm start
+>> if npm start fails try the first step
