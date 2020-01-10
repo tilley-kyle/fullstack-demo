@@ -41,7 +41,7 @@ If running the start script does not work for you try again with:
 
 If it continues to fail and you're on a macOS make sure you've installed Xcode:
 > xcode-select --install
->> npm install and try again
+>> npm install and try npm start again
 
 If it continues to fail: globally install webpack, webpack-cli, and webpack-dev-server
 > npm start
