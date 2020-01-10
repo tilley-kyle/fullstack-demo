@@ -35,14 +35,9 @@ You can spin up the back-end by using:
 
 ### WEBPACK WOES
 
-If running the start script does not work for you try again with:
-> webpack-dev-server --config ./webpack.config.js --mode development
->> Then go to localhost:8080 in your browser
-
 If it continues to fail and you're on a macOS make sure you've installed Xcode:
 > xcode-select --install
 >> npm install and try npm start again
 
 If it continues to fail: **globally install webpack, webpack-cli, and webpack-dev-server then:**
 > npm start
->> if npm start fails try the first suggestion
