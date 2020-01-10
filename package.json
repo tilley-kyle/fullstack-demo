@@ -1,6 +1,12 @@
 {
   "name": "fullstack-demo",
   "version": "1.0.0",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
