@@ -43,6 +43,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
+    open: true,
     clientLogLevel: 'silent',
     contentBase: './dist',
     hot: true,
