@@ -27,7 +27,7 @@ You can spin up the back-end by using:
 - Create a route to handle new bug reports sent from the client.
 
 ### DATABASE
-- Populate a MongoDB (w/ Mongoose) with exampleData.
+- Populate a Postgres DB or MongoDB (w/ Mongoose) with exampleData.
 
 - Create a method to send back all bug reports in the DB.
 
