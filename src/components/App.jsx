@@ -3,6 +3,7 @@ import Nav from './Nav.jsx';
 import BugTile from './BugTile.jsx';
 import exampleData from '../example-data/exampleData';
 import NewBug from './NewBug.jsx';
+import Submit from './Submit.jsx';
 
 import '../styles/App.scss';
 
@@ -24,12 +25,13 @@ class App extends React.Component {
     };
     this.filterHandler = this.filterHandler.bind(this);
     this.handleInputs = this.handleInputs.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     fetch('http://localhost:3000')
       .then( data => {
-        console.log('Electric Spider');
+        // console.log(data);
       })
       .catch( err => {
         console.log('Ça Plane pour moi');
@@ -56,11 +58,24 @@ class App extends React.Component {
     this.setState({ newBug: currentState});
   }
 
+  handleSubmit(e) {
+    fetch('http://localhost:3000', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state.newBug),
+    })
+    .then( response => response.json())
+    .then( data => console.log(data))
+    .catch( err => console.log('Kitty scratch'))
+  }
+
 
   render() {
     return (
       <div>
-        <div>new bug</div>
+        <div><Submit handleSubmit={this.handleSubmit}/></div>
         <table>
           <Nav
             filterHandler={this.filterHandler}
