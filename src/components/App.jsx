@@ -31,10 +31,7 @@ class App extends React.Component {
   componentDidMount() {
     fetch('http://localhost:3000')
       .then( data => {
-        // console.log(data);
-      })
-      .catch( err => {
-        console.log('Ça Plane pour moi');
+        data = data.json();
       })
   }
 
@@ -66,9 +63,6 @@ class App extends React.Component {
       },
       body: JSON.stringify(this.state.newBug),
     })
-    .then( response => response.json())
-    .then( data => console.log(data))
-    .catch( err => console.log('Kitty scratch'))
   }
 
 

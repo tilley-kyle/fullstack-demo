@@ -14,17 +14,24 @@ app.listen(port, () => console.log("Kitty kitty kitty kitty kitty kitty yeah!"))
 
 //route to get all bug reports in the db
 app.get('/', (req, res) => {
-  const bugs = Bug.find();
-  res.status(201);
-  res.send('send');
+  const bugs = Bug.find()
+    .then( arr => {
+      res.status(201);
+      res.send(arr);
+    })
+  // res.status(201);
+  // res.send(bugs);
 });
 
 //route to handle new bugs created in the client
 app.post('/', (req, res) => {
-  console.log(req.body);
+  if (req.body.bugDescription.length === 0) {
+    res.status(400);
+    res.send('no information provided');
+  } else {
   const newBug = new Bug(req.body);
   newBug.save();
-  res.status(201);
-  res.send('post request');
+  res.sendStatus(201);
+  };
 });
 
