@@ -23,6 +23,7 @@ class App extends React.Component {
       }
     };
     this.filterHandler = this.filterHandler.bind(this);
+    this.handleInputs = this.handleInputs.bind(this);
   }
 
   filterHandler(filter) {
@@ -39,6 +40,7 @@ class App extends React.Component {
 
   handleInputs(e) {
     const target = e.target;
+    console.log(target);
   }
 
 
@@ -50,7 +52,7 @@ class App extends React.Component {
           <Nav
             filterHandler={this.filterHandler}
           />
-          <NewBug />
+          <NewBug handleInputs={this.handleInputs} />
           {this.state.currBugs.map((bug) => (
             <BugTile
               bugName={bug.bugName}
