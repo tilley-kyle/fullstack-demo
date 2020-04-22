@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bp = require('body-parser');
+const Bug = require('./db/queries.js');
 
 const app = express();
 const port = 3000;
