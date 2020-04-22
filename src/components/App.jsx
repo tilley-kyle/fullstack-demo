@@ -26,6 +26,16 @@ class App extends React.Component {
     this.handleInputs = this.handleInputs.bind(this);
   }
 
+  componentDidMount() {
+    fetch('http://localhost:3000')
+      .then( data => {
+        console.log('Electric Spider');
+      })
+      .catch( err => {
+        console.log('Ça Plane pour moi');
+      })
+  }
+
   filterHandler(filter) {
     this.setState({ filter }, () => {
       let tempArr = [];
@@ -43,7 +53,6 @@ class App extends React.Component {
     const currentState = newBug;
     const { name, value } = e.target;
     currentState[name] = value;
-    // console.log(target.value);
     this.setState({ newBug: currentState});
   }
 
