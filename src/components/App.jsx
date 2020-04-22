@@ -39,8 +39,12 @@ class App extends React.Component {
   }
 
   handleInputs(e) {
-    const target = e.target;
-    console.log(target);
+    const { newBug } = { ...this.state };
+    const currentState = newBug;
+    const { name, value } = e.target;
+    currentState[name] = value;
+    // console.log(target.value);
+    this.setState({ newBug: currentState});
   }
 
 
