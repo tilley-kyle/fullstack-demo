@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       filter: 'None',
       bugs: exampleData,
-      currBugs: [],
+      currBugs: exampleData,
     };
     this.filterHandler = this.filterHandler.bind(this);
   }
