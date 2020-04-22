@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav.jsx';
 import BugTile from './BugTile.jsx';
 import exampleData from '../example-data/exampleData';
+import NewBug from './NewBug.jsx';
 
 import '../styles/App.scss';
 
@@ -12,6 +13,14 @@ class App extends React.Component {
       filter: 'None',
       bugs: exampleData,
       currBugs: exampleData,
+      newBug: {
+        bugName: '',
+        bugDescription: '',
+        reportedBy: '',
+        createdDate: '',
+        assignedTo: '',
+        threatLevel: '',
+      }
     };
     this.filterHandler = this.filterHandler.bind(this);
   }
@@ -28,6 +37,11 @@ class App extends React.Component {
     });
   }
 
+  handleInputs(e) {
+    const target = e.target;
+  }
+
+
   render() {
     return (
       <div>
@@ -36,6 +50,7 @@ class App extends React.Component {
           <Nav
             filterHandler={this.filterHandler}
           />
+          <NewBug />
           {this.state.currBugs.map((bug) => (
             <BugTile
               bugName={bug.bugName}
