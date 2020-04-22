@@ -18,12 +18,13 @@ class App extends React.Component {
 
   filterHandler(filter) {
     this.setState({ filter }, () => {
-      if (this.state.filter === 'None') return;
+      let tempArr = [];
       for (let i = 0; i < this.state.bugs.length; i++) {
-        if (this.state.bugs[i].threatLevel === this.state.filter) {
-          this.state.currBugs.push(this.state.bugs[i]);
+        if (this.state.bugs[i].threatLevel === this.state.filter || this.state.filter === 'None') {
+          tempArr.push(this.state.bugs[i]);
         }
       }
+      this.setState({currBugs: tempArr});
     });
   }
 
@@ -35,7 +36,7 @@ class App extends React.Component {
           <Nav
             filterHandler={this.filterHandler}
           />
-          {this.state.bugs.map((bug) => (
+          {this.state.currBugs.map((bug) => (
             <BugTile
               bugName={bug.bugName}
               bugDescription={bug.bugDescription}
