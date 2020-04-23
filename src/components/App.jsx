@@ -4,6 +4,8 @@ import BugTile from './BugTile.jsx';
 import exampleData from '../example-data/exampleData';
 import NewBug from './NewBug.jsx';
 import Submit from './Submit.jsx';
+import micromodal from 'micromodal';
+import Modal from './Modal.jsx';
 
 import '../styles/App.scss';
 
@@ -99,6 +101,7 @@ class App extends React.Component {
             />
           ))}
         </table>
+        <Modal />
       </div>
     );
   }
