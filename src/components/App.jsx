@@ -31,8 +31,11 @@ class App extends React.Component {
   componentDidMount() {
     fetch('http://localhost:3000')
       .then( data => {
-        data = data.json();
-      })
+        data = data.json()
+          .then(stuff => {
+            this.setState({currBugs: stuff});
+          });
+      });
   }
 
   filterHandler(filter) {
@@ -63,7 +66,16 @@ class App extends React.Component {
       },
       body: JSON.stringify(this.state.newBug),
     })
-  }
+    .then( () => {
+      fetch('http://localhost:3000')
+      .then( data => {
+        data = data.json()
+        .then(stuff => {
+          this.setState({currBugs: stuff});
+        });
+      });
+    })
+    }
 
 
   render() {
